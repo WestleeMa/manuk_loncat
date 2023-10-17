@@ -18,9 +18,9 @@ public class poin extends Actor
     }
     public void act()
     {
-        World myWorld = getWorld();
-        myWorld.showText(String.valueOf(score), 100, 100);
-        }
+        GreenfootImage poin = new GreenfootImage(String.valueOf(score), 50, Color.WHITE, new Color(0, 0, 0));
+        getWorld().getBackground().drawImage(poin, (getX()-220), (getY()-50));
+    }
         public static void add(int num){
         score += num;
     }

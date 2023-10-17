@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class manuk here.
+ * Write a description of class manuk_easy here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class manuk extends Actor
+public class manuk_easy extends Actor
 {
     /**
-     * Act - do whatever the manuk wants to do. This method is called whenever
+     * Act - do whatever the manuk_easy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private double g = 1;
@@ -19,7 +19,7 @@ public class manuk extends Actor
     private boolean isacross = false;
     private boolean hasaddscore = false;
     
-    public manuk(){
+    public manuk_easy(){
         GreenfootImage image = getImage();
         image.scale(60,52);
     }
@@ -53,17 +53,16 @@ public class manuk extends Actor
                 pressed = true;
             }
             haspressed = true;
-        }
-        else{
+        }else{
             haspressed = false;
         }
         return pressed;
     }
     public boolean isTouchpipe(){
         isacross = false;
-        for(corong corong : getWorld().getObjects(corong.class)){
-            if(Math.abs(corong.getX() - getX()) < 69) {
-            if(Math.abs(corong.getY() + 30 - getY()) > 37){
+        for(corong_easy corong_easy : getWorld().getObjects(corong_easy.class)){
+            if(Math.abs(corong_easy.getX() - getX()) < 69) {
+            if(Math.abs(corong_easy.getY() + 30 - getY()) > 37){
                 Greenfoot.playSound("flay.mp3");
                 isalive = false;
             }
